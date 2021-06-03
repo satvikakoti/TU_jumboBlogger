@@ -1,0 +1,51 @@
+<!--This is the file that registers user-->
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>jumboBlogger</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'logreg/style.css' %}">
+
+</head>
+<body>
+<
+<div id="login-button">
+  <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png">
+</div>
+<div id="container">
+  <h1>Sign up</h1>
+  <span class="close-btn">
+    <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png">
+  </span>
+
+<!--  <form method="post" action="{% url 'register' %}">-->
+    <form method="post">
+      {% csrf_token %}
+      <fieldset id="mycontainer">
+      {{ form|crispy }}
+      </fieldset>
+    <button class="btn btn-outline-info" type="submit">Sign Up</button>
+    <div id="remember-container">
+      <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked"/>
+      <span id="remember">I accept to the terms and conditions</span>
+    </div>
+
+</form>
+  <div>
+      <p>Have an account?</p>
+      <a  href="{% url 'login' %}">Sign In</a>
+    </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script  src="{% static 'logreg/script.js' %}"></script>
+
+</body>
+</html>
