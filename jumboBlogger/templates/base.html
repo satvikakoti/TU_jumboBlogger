@@ -21,7 +21,8 @@
 
 </head>
   <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!--This is the top nav bar -->
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand font-weight-bold" href="{% url 'blog-home' %}"></i>jumboBlogger</a>
 
 
@@ -31,7 +32,7 @@
                       <a class="nav-link" href="{% url 'blog-home' %}"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
                     </li>
 
-
+            <!--This is the menu of available options -->
 
                   </ul>
 
@@ -49,6 +50,7 @@
 
                 </div>
               </nav>
+  <!--This is the side nav bar -->
         {% for post in posts %}
         <div class="sidenav  bg-dark">
             <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
@@ -57,6 +59,7 @@
        <div>
             <img src="https://cdn.dribbble.com/users/1299339/screenshots/3065748/blogging_d_1.gif" style="margin-left:400px;">
         </div>
+  <!--This is the for generating success, failure, warning messages, etc. -->
       <div class="container my-bg">
         {% if messages %}
           {% for message in messages %}
