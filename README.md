@@ -15,4 +15,4 @@ requirements.txt
 Currently takes simple text, but can be updated to accept images as well using Python's Pillow library.
 
 Link to website:
-<a href="http://satk.pythonanywhere.com/"><img src=""></a>
+<a href="http://satk.pythonanywhere.com/"><img src="jB.png" width=50px height=40px></a>
